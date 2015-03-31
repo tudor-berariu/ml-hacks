@@ -1,6 +1,10 @@
 using PyCall;
 using PyPlot;
 
+module mnist
+
+export read_mnist_data, show_some_imgs
+
 # Read images from file
 function read_mnist_img_file(path::String, correct_magic_number::Int32)
     img_file = open(path, "r")
@@ -73,11 +77,4 @@ function show_some_imgs(imgs, labels, rows::Integer, cols::Integer)
     imshow(m)
 end
 
-#data = read_mnist_data();
-
-#println(size(data["train_img"]))
-#println(size(data["train_label"]))
-#println(size(data["test_img"]))
-#println(size(data["test_label"]))
-
-#show_some_imgs(data["train_img"], data["train_label"], 10,10)
+end
