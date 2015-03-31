@@ -1,5 +1,5 @@
-using PyCall;
-using PyPlot;
+#using PyCall;
+#using PyPlot;
 
 module mnist
 
